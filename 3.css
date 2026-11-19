@@ -1,0 +1,42 @@
+/*Reset Default Margin*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Full page background image*/
+body{
+    background-image: url(upside\ down\ triangle.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.content{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+button{
+    background: blue;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 200px;
+    transition: background-color 2s, width 1s, height 1s;
+}
+
+button:hover{
+    background-color: orange;
+    color: wheat;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+

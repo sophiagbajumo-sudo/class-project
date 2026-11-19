@@ -1,0 +1,73 @@
+/*Restore Default Margin*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: move 18s linear infinite;
+    padding: 50px;
+}
+
+/*Pause animation when hovering on any card*/
+.slider:hover {
+    animation-play-state: paused;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    background: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card p{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+    text-align: center;
+    margin-top: 20px;    
+}
+
+.card:hover{
+    transform: scale(1.3);
+    background: orange;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.card:hover p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes move{
+
+    0%{
+        transform: translateX(100vw);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
